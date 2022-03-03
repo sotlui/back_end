@@ -90,7 +90,8 @@ app.post('/api/notes', (request, response) => {
   response.status(201).json(note)
 })
 
-const PORT = 3001
+// Para Heroku siempres asi
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Sever running on port ${PORT}`)
 })
